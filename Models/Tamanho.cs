@@ -1,6 +1,6 @@
-﻿namespace E_commerce;
+﻿namespace E_commerce.Models;
 
-public class Tamanho
+public class Tamanho : Model
 {
     public int? TamanhoId { get; }
     public string? TamanhoNome { get; }

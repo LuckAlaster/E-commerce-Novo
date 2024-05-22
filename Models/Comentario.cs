@@ -1,6 +1,6 @@
-﻿namespace E_commerce;
+﻿namespace E_commerce.Models;
 
-public class Comentario
+public class Comentario : Model
 {
     public int? ComentarioId { get; }
     public string? TextoComentario { get; }

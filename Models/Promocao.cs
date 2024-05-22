@@ -1,8 +1,8 @@
-﻿namespace E_commerce;
+﻿namespace E_commerce.Models;
 
-public class Promocao
+public class Promocao: Model
 {
-    public int? PromocaoId { get;}
+    public int? PromocaoId { get; }
     public float? PorcentagemDaPromocao { get; }
     public string? DescricaoDaPromocao { get; }
     public DateTime? DataDeInicio { get; }

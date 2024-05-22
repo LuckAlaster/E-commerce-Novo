@@ -1,6 +1,6 @@
-﻿namespace E_commerce;
+﻿namespace E_commerce.Models;
 
-public class Cor
+public class Cor : Model
 {
     public int? CorId { get; }
     public string? NomeCor { get; }

@@ -1,6 +1,6 @@
-﻿namespace E_commerce;
+﻿namespace E_commerce.Models;
 
-public class HistoricoPreco
+public class HistoricoPreco : Model
 {
     public int? HistoricoPrecoId { get; }
     public DateTime? DataAlteracao { get; }

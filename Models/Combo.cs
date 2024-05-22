@@ -1,6 +1,6 @@
-﻿namespace E_commerce;
+﻿namespace E_commerce.Models;
 
-public class Combo
+public class Combo : Model
 {
 
     public int? ComboId { get; }

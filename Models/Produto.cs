@@ -1,8 +1,8 @@
-﻿namespace E_commerce;
+﻿namespace E_commerce.Models;
 
-public class Produto
+public class Produto : Model
 {
-    public int? ProdutoId { get;}
+    public int? ProdutoId { get; }
     public string? NomeDoProduto { get; }
     public string DescricaoDoProduto { get; }
     public float? PrecoDoProduto { get; }

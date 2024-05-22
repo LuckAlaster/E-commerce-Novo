@@ -1,11 +1,12 @@
 ﻿using E_commerce.Enum;
-namespace E_commerce;
 
-public class Pedido
+namespace E_commerce.Models;
+
+public class Pedido : Model
 {
     public int? PedidoId { get; }
     public DateTime? DataPedido { get; }
-    public bool? Pago {get;}
+    public bool? Pago { get; }
     public float Desconto { get; }
     public StatusPedido? StatusPedido { get; }
     public Cliente? ClienteId { get; }

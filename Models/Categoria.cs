@@ -1,6 +1,6 @@
-﻿namespace E_commerce;
+﻿namespace E_commerce.Models;
 
-public class Categoria
+public class Categoria : Model
 {
 
     public int? CategoriaId { get; }

@@ -1,8 +1,8 @@
 ﻿using E_commerce.Enum;
 
-namespace E_commerce;
+namespace E_commerce.Models;
 
-public class Cliente
+public class Cliente : Model
 {
     public int? ClienteId { get; }
     public string? NomeCliente { get; }
