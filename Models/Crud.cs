@@ -1,7 +1,7 @@
 ﻿namespace E_commerce.Models;
 using E_commerce.Inteface;
 
-public class Crud : Model, IRepository
+public class Crud : IRepository
 {
     public List<Model> ListaDeObjetos = new ();
     private Random random = new Random ();
@@ -19,5 +19,14 @@ public class Crud : Model, IRepository
             }
         }
         throw new Exception("Essa id não existe dentro da ListaDeObjetos");
+    }
+    public Categoria Create(Categoria novaCategoria)
+    {
+        if (novaCategoria.ModelId != null)
+        {
+            throw new Exception("Essa novaCategoria possui uma Id");
+        }
+        novaCategoria.ModelId = random.Next();
+        return novaCategoria;
     }
 }
