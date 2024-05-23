@@ -1,15 +1,16 @@
-﻿namespace E_commerce.Models;
-
-public class Categoria : Model
+﻿namespace E_commerce.Models
 {
-
-    public int? CategoriaId { get; }
-    public string? NomeCategoria { get; }
-    public string DescricaoCategoria { get; }
-    public Categoria(int? categoriaId, string? nomeCategoria, string descricaoCategoria)
+    public class Categoria : Model
     {
-        CategoriaId = categoriaId;
-        NomeCategoria = nomeCategoria;
-        DescricaoCategoria = descricaoCategoria;
+
+        public int? CategoriaId { get; }
+        public string NomeCategoria { get; }
+        public string DescricaoCategoria { get; }
+        public Categoria(int? categoriaId, string nomeCategoria, string descricaoCategoria)
+        {
+            CategoriaId = categoriaId;
+            NomeCategoria = nomeCategoria;
+            DescricaoCategoria = descricaoCategoria;
+        }
     }
 }

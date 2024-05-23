@@ -1,11 +1,14 @@
-﻿namespace E_commerce.Inteface;
-using E_commerce.Models;
-
-public interface IRepository
+﻿namespace E_commerce.Inteface
 {
-    List<Model> FindAll();
-    Model FindById(int id);
-    Model Create(Model model);
-    Model Update(Model model);
-    void Delete(int id);
+    using E_commerce.Models;
+    using System.Collections.Generic;
+
+    public interface IRepository<T> where T : Model
+    {
+        List<T> FindAll();
+        T FindById(int id);
+        T Create(T model);
+        T Update(T model);
+        void Delete(int id);
+    }
 }

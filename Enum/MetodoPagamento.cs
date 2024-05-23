@@ -1,9 +1,10 @@
-﻿namespace E_commerce.Enum;
-
-public enum MetodoPagamento
+﻿namespace E_commerce.Enum
 {
-    CartaoDeCredito,
-    CartaoDeDebito,
-    Pix,
-    Boleto
+    public enum MetodoPagamento
+    {
+        CartaoDeCredito,
+        CartaoDeDebito,
+        Pix,
+        Boleto
+    }
 }

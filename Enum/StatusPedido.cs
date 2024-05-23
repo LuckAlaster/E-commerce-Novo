@@ -1,10 +1,11 @@
-﻿namespace E_commerce.Enum;
-
-public enum StatusPedido
+﻿namespace E_commerce.Enum
 {
-    AguardandoPagamento,
-    ConfirmacaoPendente,
-    Caminho,
-    Entregue,
-    Cancelado
+    public enum StatusPedido
+    {
+        AguardandoPagamento,
+        ConfirmacaoPendente,
+        Caminho,
+        Entregue,
+        Cancelado
+    }
 }

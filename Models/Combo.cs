@@ -1,17 +1,20 @@
-﻿namespace E_commerce.Models;
+﻿using System.Collections.Generic;
 
-public class Combo : Model
+namespace E_commerce.Models
 {
-
-    public int? ComboId { get; }
-    public string? DescricaoCombo { get; }
-    public float? ValorCombo { get; }
-    public List<Produto>? ListaProdutos { get; }
-    public Combo(int? comboId, string? descricaoCombo, float? valorCombo, List<Produto>? listaProdutos)
+    public class Combo : Model
     {
-        ComboId = comboId;
-        DescricaoCombo = descricaoCombo;
-        ValorCombo = valorCombo;
-        ListaProdutos = listaProdutos;
+
+        public int? ComboId { get; }
+        public string DescricaoCombo { get; }
+        public float? ValorCombo { get; }
+        public List<Produto> ListaProdutos { get; }
+        public Combo(int? comboId, string descricaoCombo, float valorCombo, List<Produto> listaProdutos)
+        {
+            ComboId = comboId;
+            DescricaoCombo = descricaoCombo;
+            ValorCombo = valorCombo;
+            ListaProdutos = listaProdutos;
+        }
     }
 }

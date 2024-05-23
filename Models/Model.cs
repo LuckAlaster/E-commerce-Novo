@@ -1,7 +1,8 @@
-﻿namespace E_commerce.Models;
-
-public class Model
+﻿namespace E_commerce.Models
 {
-    public int ModelId { get; set; }
+    public class Model
+    {
+        public int ModelId { get; set; }
 
+    }
 }

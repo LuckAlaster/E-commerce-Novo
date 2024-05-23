@@ -1,17 +1,20 @@
-﻿namespace E_commerce.Models;
+﻿using System.Collections.Generic;
 
-public class Marca : Model
+namespace E_commerce.Models
 {
-    public int? MarcaId { get; }
-    public string? NomeDaMarca { get; }
-    public string DescricaoDaMarca { get; }
-    public List<Produto> ListaProdutos { get; }
-    public Marca(int? marcaID, string? nomeDaMarca, string descricaoDaMarca, List<Produto> listaProdutos)
+    public class Marca : Model
     {
-        MarcaId = marcaID;
-        NomeDaMarca = nomeDaMarca;
-        DescricaoDaMarca = descricaoDaMarca;
-        ListaProdutos = listaProdutos;
-    }
+        public int? MarcaId { get; }
+        public string NomeDaMarca { get; }
+        public string DescricaoDaMarca { get; }
+        public List<Produto> ListaProdutos { get; }
+        public Marca(int? marcaID, string nomeDaMarca, string descricaoDaMarca, List<Produto> listaProdutos)
+        {
+            MarcaId = marcaID;
+            NomeDaMarca = nomeDaMarca;
+            DescricaoDaMarca = descricaoDaMarca;
+            ListaProdutos = listaProdutos;
+        }
 
+    }
 }

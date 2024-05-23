@@ -1,14 +1,17 @@
-﻿namespace E_commerce.Models;
+﻿using System.Collections.Generic;
 
-public class Cor : Model
+namespace E_commerce.Models
 {
-    public int? CorId { get; }
-    public string? NomeCor { get; }
-    public string? RGB { get; }
-    public Cor(int? corId, string? nomeCor, string? rgb, List<Produto> listaProduto)
+    public class Cor : Model
     {
-        CorId = corId;
-        NomeCor = nomeCor;
-        RGB = rgb;
+        public int? CorId { get; }
+        public string NomeCor { get; }
+        public string RGB { get; }
+        public Cor(int? corId, string nomeCor, string rgb, List<Produto> listaProduto)
+        {
+            CorId = corId;
+            NomeCor = nomeCor;
+            RGB = rgb;
+        }
     }
 }

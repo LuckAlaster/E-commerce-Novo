@@ -1,8 +1,5 @@
-﻿using System;
+﻿using E_commerce.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace E_commerce
 {
@@ -10,6 +7,7 @@ namespace E_commerce
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
