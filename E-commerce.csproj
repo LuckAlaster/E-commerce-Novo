@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6CEF96D6-F064-4C01-AAB2-C4A1FA0890E9}</ProjectGuid>
+    <ProjectGuid>{71A4A17B-2BEA-4D3C-BFB1-89016E7B139F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>E_commerce_Novo</RootNamespace>
-    <AssemblyName>E-commerce Novo</AssemblyName>
+    <RootNamespace>E_commerce</RootNamespace>
+    <AssemblyName>E-commerce</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enum\MetodoPagamento.cs" />
+    <Compile Include="Enum\StatusPedido.cs" />
+    <Compile Include="Inteface\IRepository.cs" />
+    <Compile Include="Models\Categoria.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Combo.cs" />
+    <Compile Include="Models\Comentario.cs" />
+    <Compile Include="Models\Cor.cs" />
+    <Compile Include="Models\Crud.cs" />
+    <Compile Include="Models\HistoricoPreco.cs" />
+    <Compile Include="Models\Marca.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\Pedido.cs" />
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\Promocao.cs" />
+    <Compile Include="Models\Tamanho.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

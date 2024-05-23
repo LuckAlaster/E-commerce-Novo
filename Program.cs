@@ -10,8 +10,6 @@ namespace E_commerce
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("HELLO WORLD");
-            Console.ReadLine();
         }
     }
 }
