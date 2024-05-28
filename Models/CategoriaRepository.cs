@@ -7,7 +7,13 @@
 
     public class CategoriaRepository : IRepository<Categoria>
     {
-        private List<Categoria> ListaDeObjetos = new List<Categoria>();
+        private List<Categoria> ListaDeObjetos = new List<Categoria>()
+        {
+                new Categoria (1,1, "Motor de carro", "Voltado para produtos de carro"),
+                new Categoria (2,2, "Motor de moto", "Voltado para produtos de moto"),
+                new Categoria (3,3, "Motor de caminhão", "Voltado para produtos de caminhão"),
+                new Categoria (4,4, "Motor de avião", "Voltado para produtos de avião"),
+        };
         public List<Categoria> FindAll()
         {
             return new List<Categoria>(ListaDeObjetos);
@@ -33,25 +39,20 @@
         }
         public Categoria Update(Categoria updateModel) 
         {
-            foreach (Categoria categoria in ListaDeObjetos)
+            Categoria categoriaParaAtualizar = ListaDeObjetos.FirstOrDefault(c => c.ModelId == updateModel.ModelId) ?? throw new Exception("Essa categoria não existe na ListaDeObjetos");
+            if (categoriaParaAtualizar != null)
             {
-                if (categoria.ModelId == updateModel.ModelId)
-                {
-                    ListaDeObjetos[categoria.ModelId] = updateModel;
-                }
+                ListaDeObjetos[categoriaParaAtualizar.ModelId-1] = updateModel;
             }
-            throw new Exception("Essa categoria não existe na ListaDeObjetos");
+            return categoriaParaAtualizar;
         }
         public void Delete(int id)
         {
-            foreach (Categoria model in ListaDeObjetos)
+            Categoria model = ListaDeObjetos.FirstOrDefault(d => d.ModelId == id) ?? throw new Exception("Essa objeto não existe na lista");
+            if (model.ModelId == id)
             {
-                if (model.ModelId == id)
-                {
-                    ListaDeObjetos.Remove(model);
-                }
+                ListaDeObjetos.Remove(model);
             }
-            throw new Exception("Essa objeto não existe na lista");
         }
     }
 }
