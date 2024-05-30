@@ -4,15 +4,14 @@ namespace E_commerce.Models
 {
     public class HistoricoPreco : Model
     {
-        public int? HistoricoPrecoId { get; }
         public DateTime? DataAlteracao { get; }
-        public Produto ProdutoId { get; }
+        public Produto Produto { get; }
         public float? Preco { get; }
-        public HistoricoPreco(int? historicoPrecoId, DateTime? dataAlteracao, Produto produto, float? preco)
+        public HistoricoPreco(int id, DateTime? dataAlteracao, Produto produto, float? preco)
         {
-            HistoricoPrecoId = historicoPrecoId;
+            Id = id;
             DataAlteracao = dataAlteracao;
-            ProdutoId = produto;
+            Produto = produto;
             Preco = preco;
         }
     }

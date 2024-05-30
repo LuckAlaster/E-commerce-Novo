@@ -6,25 +6,24 @@
 
     public class Pedido : Model
     {
-        public int? PedidoId { get; }
-        public DateTime? DataPedido { get; }
+        public DateTime? Data { get; }
         public bool? Pago { get; }
         public float Desconto { get; }
-        public StatusPedido? StatusPedido { get; }
-        public Cliente ClienteId { get; }
-        public List<Produto> ListaProduto { get; }
+        public StatusPedido? Status { get; }
+        public Cliente Cliente { get; }
+        public List<Produto> ListaProdutos { get; }
         public List<Comentario> ListaComentarios { get; }
         public List<Cor> ListaCores { get; }
         public List<Tamanho> ListaTamanhos { get; }
-        public Pedido(int? pedidoId, DateTime? dataPedido, bool? pago, float desconto, StatusPedido? statusPedido, Cliente clienteId, List<Produto> listaProduto, List<Comentario> listaComentarios, List<Cor> listaCores, List<Tamanho> listaTamanhos)
+        public Pedido(int id, DateTime? data, bool? pago, float desconto, StatusPedido? status, Cliente cliente, List<Produto> listaProdutos, List<Comentario> listaComentarios, List<Cor> listaCores, List<Tamanho> listaTamanhos)
         {
-            PedidoId = pedidoId;
-            DataPedido = dataPedido;
+            Id = id;
+            Data = data;
             Pago = pago;
             Desconto = desconto;
-            StatusPedido = statusPedido;
-            ClienteId = clienteId;
-            ListaProduto = listaProduto;
+            Status = status;
+            Cliente = cliente;
+            ListaProdutos = listaProdutos;
             ListaComentarios = listaComentarios;
             ListaCores = listaCores;
             ListaTamanhos = listaTamanhos;

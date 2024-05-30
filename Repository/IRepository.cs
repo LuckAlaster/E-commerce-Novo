@@ -1,4 +1,4 @@
-﻿namespace E_commerce.Interface
+﻿namespace E_commerce.Repository
 {
     using E_commerce.Models;
     using System.Collections.Generic;

@@ -2,16 +2,13 @@
 {
     public class Categoria : Model
     {
-
-        public int? CategoriaId { get; }
-        public string NomeCategoria { get; }
-        public string DescricaoCategoria { get; }
-        public Categoria(int modelId, int? categoriaId, string nomeCategoria, string descricaoCategoria)
+        public string Nome { get; }
+        public string Descricao { get; }
+        public Categoria(int id, string nome, string descricao)
         {
-            CategoriaId = categoriaId;
-            NomeCategoria = nomeCategoria;
-            DescricaoCategoria = descricaoCategoria;
-            ModelId = modelId;
+            Id = id;
+            Nome = nome;
+            Descricao = descricao;
         }
     }
 }

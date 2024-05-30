@@ -115,13 +115,13 @@
   <ItemGroup>
     <Compile Include="Enum\MetodoPagamento.cs" />
     <Compile Include="Enum\StatusPedido.cs" />
-    <Compile Include="Interface\IRepository.cs" />
+    <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Combo.cs" />
     <Compile Include="Models\Comentario.cs" />
     <Compile Include="Models\Cor.cs" />
-    <Compile Include="Models\CategoriaRepository.cs" />
+    <Compile Include="Repository\CategoriaRepository.cs" />
     <Compile Include="Models\HistoricoPreco.cs" />
     <Compile Include="Models\Marca.cs" />
     <Compile Include="Models\Model.cs" />

@@ -5,18 +5,17 @@ namespace E_commerce.Models
 {
     public class Cliente : Model
     {
-        public int? ClienteId { get; }
-        public string NomeCliente { get; }
-        public string EnderecoCliente { get; }
+        public string Nome { get; }
+        public string Endereco { get; }
         public MetodoPagamento? MetodoDePagamento { get; }
-        public List<Pedido> PedidosDoCliente { get; }
-        public Cliente(int? clienteId, string nomeCliente, string enderecoCliente, MetodoPagamento? metodoDePagamento, List<Pedido> pedidosDoCliente)
+        public List<Pedido> Pedidos { get; }
+        public Cliente(int id, string nome, string endereco, MetodoPagamento? metodoDePagamento, List<Pedido> pedidos)
         {
-            ClienteId = clienteId;
-            NomeCliente = nomeCliente;
-            EnderecoCliente = enderecoCliente;
+            Id = id;
+            Nome = nome;
+            Endereco = endereco;
             MetodoDePagamento = metodoDePagamento;
-            PedidosDoCliente = pedidosDoCliente;
+            Pedidos = pedidos;
         }
     }
 }

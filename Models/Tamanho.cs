@@ -2,14 +2,13 @@
 {
     public class Tamanho : Model
     {
-        public int? TamanhoId { get; }
-        public string TamanhoNome { get; }
-        public string TamanhoDescricao { get; }
-        public Tamanho(int? tamanhoId, string tamanhoNome, string tamanhoDescricao)
+        public string Nome { get; }
+        public string Descricao { get; }
+        public Tamanho(int id, string nome, string descricao)
         {
-            TamanhoId = tamanhoId;
-            TamanhoNome = tamanhoNome;
-            TamanhoDescricao = tamanhoDescricao;
+            Id = id;
+            Nome = nome;
+            Descricao = descricao;
         }
     }
 }

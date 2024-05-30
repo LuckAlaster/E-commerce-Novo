@@ -2,18 +2,17 @@
 {
     public class Comentario : Model
     {
-        public int? ComentarioId { get; }
-        public string TextoComentario { get; }
-        public Cliente ClienteId { get; }
-        public Pedido PedidoId { get; }
-        public Produto ProdutoId { get; }
-        public Comentario(int? comentarioId, string textoComentario, Cliente clienteId, Pedido pedidoId, Produto produtoId)
+        public string Texto { get; }
+        public Cliente Cliente { get; }
+        public Pedido Pedido { get; }
+        public Produto Produto { get; }
+        public Comentario(int id, string textoComentario, Cliente cliente, Pedido pedido, Produto produto)
         {
-            ComentarioId = comentarioId;
-            TextoComentario = textoComentario;
-            ClienteId = clienteId;
-            PedidoId = pedidoId;
-            ProdutoId = produtoId;
+            Id = id;
+            Texto = textoComentario;
+            Cliente = cliente;
+            Pedido = pedido;
+            Produto = produto;
         }
     }
 }
