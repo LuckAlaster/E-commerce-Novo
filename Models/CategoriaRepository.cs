@@ -1,6 +1,6 @@
 ﻿namespace E_commerce.Models
 {
-    using E_commerce.Inteface;
+    using E_commerce.Interface;
     using System;
     using System.Collections.Generic;
     using System.Linq;

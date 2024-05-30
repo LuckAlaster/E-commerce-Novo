@@ -1,4 +1,4 @@
-﻿namespace E_commerce.Inteface
+﻿namespace E_commerce.Interface
 {
     using E_commerce.Models;
     using System.Collections.Generic;

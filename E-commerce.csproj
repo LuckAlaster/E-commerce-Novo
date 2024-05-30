@@ -115,7 +115,7 @@
   <ItemGroup>
     <Compile Include="Enum\MetodoPagamento.cs" />
     <Compile Include="Enum\StatusPedido.cs" />
-    <Compile Include="Inteface\IRepository.cs" />
+    <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Combo.cs" />
