@@ -15,9 +15,8 @@
         public List<Comentario> ListaComentarios { get; }
         public List<Cor> ListaCores { get; }
         public List<Tamanho> ListaTamanhos { get; }
-        public Pedido(int id, DateTime? data, bool? pago, float desconto, StatusPedido? status, Cliente cliente, List<Produto> listaProdutos, List<Comentario> listaComentarios, List<Cor> listaCores, List<Tamanho> listaTamanhos)
+        public Pedido(DateTime? data, bool? pago, float desconto, StatusPedido? status, Cliente cliente, List<Produto> listaProdutos, List<Comentario> listaComentarios, List<Cor> listaCores, List<Tamanho> listaTamanhos)
         {
-            Id = id;
             Data = data;
             Pago = pago;
             Desconto = desconto;

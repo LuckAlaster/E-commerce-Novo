@@ -6,9 +6,8 @@ namespace E_commerce.Models
     {
         public string Nome { get; }
         public string RGB { get; }
-        public Cor(int id, string nome, string rgb)
+        public Cor(string nome, string rgb)
         {
-            Id = id;
             Nome = nome;
             RGB = rgb;
         }

@@ -7,9 +7,8 @@ namespace E_commerce.Models
         public DateTime? DataAlteracao { get; }
         public Produto Produto { get; }
         public float? Preco { get; }
-        public HistoricoPreco(int id, DateTime? dataAlteracao, Produto produto, float? preco)
+        public HistoricoPreco(DateTime? dataAlteracao, Produto produto, float? preco)
         {
-            Id = id;
             DataAlteracao = dataAlteracao;
             Produto = produto;
             Preco = preco;

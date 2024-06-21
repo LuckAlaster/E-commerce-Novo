@@ -4,9 +4,8 @@
     {
         public string Nome { get; }
         public string Descricao { get; }
-        public Tamanho(int id, string nome, string descricao)
+        public Tamanho(string nome, string descricao)
         {
-            Id = id;
             Nome = nome;
             Descricao = descricao;
         }

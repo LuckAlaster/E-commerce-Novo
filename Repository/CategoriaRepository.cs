@@ -1,57 +1,63 @@
 ﻿namespace E_commerce.Models
 {
     using E_commerce.Repository;
+    using MathNet.Numerics.Distributions;
+    using NPOI.SS.Formula.Functions;
+    using Org.BouncyCastle.Utilities;
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
     public class CategoriaRepository : IRepository<Categoria>
     {
-        private List<Categoria> ListaDeObjetos = new List<Categoria>()
-        {
-                new Categoria (1, "Motor de carro", "Voltado para produtos de carro"),
-                new Categoria (2, "Motor de moto", "Voltado para produtos de moto"),
-                new Categoria (3, "Motor de caminhão", "Voltado para produtos de caminhão"),
-                new Categoria (4, "Motor de avião", "Voltado para produtos de avião"),
-        };
+        private List<Categoria> ListaDeObjetos = new List<Categoria>();
         public List<Categoria> FindAll()
-        {
-            return new List<Categoria>(ListaDeObjetos);
-        }
-        public Categoria FindById(int id)
-        {
-            return ListaDeObjetos.FirstOrDefault(x => x.Id == id) ?? throw new Exception("Essa id não existe dentro da ListaDeObjetos");   
-        }
-
-        public Categoria Create(Categoria novaModel)
-        {
-            if (novaModel.Id != null)
+        { 
+            if (ListaDeObjetos == null)
             {
-                throw new Exception("Essa novaModel possui uma CategoriaId");
+                return ListaDeObjetos = null;
             }
+            return ListaDeObjetos;
+        }
+        public Categoria FindById(uint? id)
+        {
+            return ListaDeObjetos.First(x => x.Id == id) ??  throw new Exception("Essa id não existe dentro da ListaDeObjetos");   
+        }
+        public Categoria FindByIdWithoutThrow(uint? id, string exception = "Essa id não existe nessa lista")
+        {
+            return ListaDeObjetos.FirstOrDefault(x => x.Id == id) ?? throw new Exception(exception);
+        }
+        public Categoria Create(Categoria novaCategoria)
+        {
+            if (novaCategoria.Id != null)
+            {
+                throw new Exception("Essa Categoria possui um Id");
+            }
+            var lastId = (uint)ListaDeObjetos.Count;
+            bool naMinhaListaTemIsso;
             do
             {
-                novaModel.Id = Guid.NewGuid().GetHashCode();
+                novaCategoria.Id = lastId + 1;
+                naMinhaListaTemIsso = ListaDeObjetos.Any(l => l.Id == novaCategoria.Id);
             }
-            while (ListaDeObjetos.Exists(m => m.Id == novaModel.Id));
-            ListaDeObjetos.Add(novaModel);
-            return novaModel;
+            while (naMinhaListaTemIsso);
+            ListaDeObjetos.Add(novaCategoria);
+            return novaCategoria;
         }
-        public Categoria Update(Categoria updateModel) 
+        public Categoria Update(Categoria updateCategoria) 
         {
-            Categoria categoriaParaAtualizar = ListaDeObjetos.FirstOrDefault(c => c.Id == updateModel.Id) ?? throw new Exception("Essa categoria não existe na ListaDeObjetos");
-            if (categoriaParaAtualizar != null)
-            {
-                ListaDeObjetos[categoriaParaAtualizar.Id-1] = updateModel;
-            }
+            uint? id = updateCategoria.Id;
+            Categoria categoriaParaAtualizar = FindByIdWithoutThrow(id) ?? throw new Exception("Essa categoria não existe na ListaDeObjetos");
+            categoriaParaAtualizar.Nome = updateCategoria.Nome;
+            categoriaParaAtualizar.Descricao = updateCategoria.Descricao;
             return categoriaParaAtualizar;
         }
-        public void Delete(int id)
+        public void Delete(uint? id)
         {
-            Categoria model = ListaDeObjetos.FirstOrDefault(d => d.Id == id) ?? throw new Exception("Essa objeto não existe na lista");
-            if (model.Id == id)
+            Categoria categoriaDeletar = FindByIdWithoutThrow(id) ?? throw new Exception("Essa objeto não existe na lista");
+            if (categoriaDeletar.Id == id)
             {
-                ListaDeObjetos.Remove(model);
+                ListaDeObjetos.Remove(categoriaDeletar);
             }
         }
     }

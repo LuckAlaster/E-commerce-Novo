@@ -2,13 +2,12 @@
 {
     public class Comentario : Model
     {
-        public string Texto { get; }
-        public Cliente Cliente { get; }
-        public Pedido Pedido { get; }
-        public Produto Produto { get; }
-        public Comentario(int id, string textoComentario, Cliente cliente, Pedido pedido, Produto produto)
+        public string Texto { get; set; }
+        public Cliente Cliente { get; set; }
+        public Pedido Pedido { get; set; }
+        public Produto Produto { get; set; }
+        public Comentario(string textoComentario, Cliente cliente, Pedido pedido, Produto produto)
         {
-            Id = id;
             Texto = textoComentario;
             Cliente = cliente;
             Pedido = pedido;

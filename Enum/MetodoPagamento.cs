@@ -2,9 +2,9 @@
 {
     public enum MetodoPagamento
     {
-        CartaoDeCredito,
-        CartaoDeDebito,
-        Pix,
-        Boleto
+        CARTAO_CREDITO,
+        CARTAO_DEBITO,
+        PIX,
+        BOLETO
     }
 }

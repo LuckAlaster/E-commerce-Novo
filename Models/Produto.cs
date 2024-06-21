@@ -15,9 +15,8 @@ namespace E_commerce.Models
         public List<Cor> ListaCores { get; }
         public List<HistoricoPreco> HistoricoPreco { get; }
         public List<Tamanho> ListaTamanhos { get; }
-        public Produto(int id, string nomeDoProduto, string descricao, float? preco, float avaliacao, Marca marca, Promocao promocao, List<Categoria> listaCategorias, List<Comentario> listaComentarios, List<Cor> listaCores, List<HistoricoPreco> historicoPreco, List<Tamanho> listaTamanhos)
+        public Produto(string nomeDoProduto, string descricao, float? preco, float avaliacao, Marca marca, Promocao promocao, List<Categoria> listaCategorias, List<Comentario> listaComentarios, List<Cor> listaCores, List<HistoricoPreco> historicoPreco, List<Tamanho> listaTamanhos)
         {
-            Id = id;
             Nome = nomeDoProduto;
             Descricao = descricao;
             Preco = preco;

@@ -2,10 +2,10 @@
 {
     public enum StatusPedido
     {
-        AguardandoPagamento,
-        ConfirmacaoPendente,
-        Caminho,
-        Entregue,
-        Cancelado
+        AGUARDANDO_PAGAMENTO,
+        CONFIRMACAO_PENDENTE,
+        CAMINHO,
+        ENTREGUE,
+        CANCELADO
     }
 }

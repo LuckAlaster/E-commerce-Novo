@@ -10,9 +10,8 @@ namespace E_commerce.Models
         public DateTime? DataDeInicio { get; }
         public DateTime? DataDeFim { get; }
         public List<Produto> ListaProdutos { get; }
-        public Promocao(int id, float? porcentagemDesconto, string descricao, DateTime? dataDeInicio, DateTime? dataDeFim, List<Produto> listaProdutos)
+        public Promocao(float? porcentagemDesconto, string descricao, DateTime? dataDeInicio, DateTime? dataDeFim, List<Produto> listaProdutos)
         {
-            Id = id;
             PorcentagemDesconto = porcentagemDesconto;
             Descricao = descricao;
             DataDeInicio = dataDeInicio;

@@ -2,6 +2,6 @@
 {
     public class Model
     {
-        public int Id { get; set; }
+        public uint? Id { get; set; }
     }
 }

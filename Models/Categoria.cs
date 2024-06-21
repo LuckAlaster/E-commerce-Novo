@@ -2,11 +2,10 @@
 {
     public class Categoria : Model
     {
-        public string Nome { get; }
-        public string Descricao { get; }
-        public Categoria(int id, string nome, string descricao)
+        public string Nome { get; set; }
+        public string Descricao { get; set; }
+        public Categoria(string nome, string descricao)
         {
-            Id = id;
             Nome = nome;
             Descricao = descricao;
         }

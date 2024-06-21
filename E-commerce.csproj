@@ -115,6 +115,9 @@
   <ItemGroup>
     <Compile Include="Enum\MetodoPagamento.cs" />
     <Compile Include="Enum\StatusPedido.cs" />
+    <Compile Include="Repository\ClienteRepository.cs" />
+    <Compile Include="Repository\ComboRepository.cs" />
+    <Compile Include="Repository\ComentarioRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Cliente.cs" />

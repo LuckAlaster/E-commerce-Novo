@@ -6,9 +6,9 @@
     public interface IRepository<T> where T : Model
     {
         List<T> FindAll();
-        T FindById(int id);
+        T FindById(uint? id, string exceptionNotFound);
         T Create(T model);
         T Update(T model);
-        void Delete(int id);
+        void Delete(uint? id);
     }
 }

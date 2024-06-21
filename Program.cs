@@ -9,8 +9,12 @@ namespace E_commerce
         static void Main(string[] args)
         {
             CategoriaRepository categoriaRepository = new CategoriaRepository();
-            categoriaRepository.Update(new Categoria (4,4, "Motor de helicoptero", "Voltado para produtos de helicóptero"));
-            categoriaRepository.Delete(3);
+            categoriaRepository.FindAll();
+            categoriaRepository.Create(new Categoria("Motor de triciclo", "Voltado para triciclos"));
+            categoriaRepository.Update(new Categoria("Motor de helicoptero", "Voltado para produtos de helicóptero"));
+            categoriaRepository.FindById(5);
+            categoriaRepository.FindByIdWithoutThrow(5);
+            categoriaRepository.Delete(5);
         }
     }
 }
