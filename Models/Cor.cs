@@ -6,10 +6,10 @@ namespace E_commerce.Models
     {
         public string Nome { get; }
         public string RGB { get; }
-        public Cor(string nome, string rgb)
+        public Cor(string Nome, string RGB)
         {
-            Nome = nome;
-            RGB = rgb;
+            this.Nome = Nome;
+            this.RGB = RGB;
         }
     }
 }

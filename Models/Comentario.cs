@@ -6,12 +6,12 @@
         public Cliente Cliente { get; set; }
         public Pedido Pedido { get; set; }
         public Produto Produto { get; set; }
-        public Comentario(string textoComentario, Cliente cliente, Pedido pedido, Produto produto)
+        public Comentario(string Texto, Cliente Cliente, Pedido Pedido, Produto Produto)
         {
-            Texto = textoComentario;
-            Cliente = cliente;
-            Pedido = pedido;
-            Produto = produto;
+            this.Texto = Texto;
+            this.Cliente = Cliente;
+            this.Pedido = Pedido;
+            this.Produto = Produto;
         }
     }
 }

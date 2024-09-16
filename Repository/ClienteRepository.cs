@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace E_commerce.Repository
 {
-    internal class ClienteRepository
+    internal class ClienteRepository : IRepository<Cliente>
     {
         private List<Cliente> ListaDeClientes = new List<Cliente>();
         public List<Cliente> FindAll()
         {
             return ListaDeClientes;
         }
-        public Cliente FindById(uint? id)
+        public Cliente FindById(uint? id, string exceptionNotFound = "Essa id não existe na lista de Clientes")
         {
-            return ListaDeClientes.First(i => i.Id == id) ?? throw new Exception("Essa id não existe nessa lista");
+            return ListaDeClientes.First(i => i.Id == id) ?? throw new Exception(exceptionNotFound);
         }
-        public Cliente FindByIdWithoutThrow(uint? id, string exception = "Essa id não existe nessa lista") 
+        public Cliente FindByIdWithoutThrow(uint? id, string exceptionNotFound = "Essa id não existe nessa lista") 
         {
-            return ListaDeClientes.FirstOrDefault(i => i.Id == id) ?? throw new Exception(exception);
+            return ListaDeClientes.FirstOrDefault(i => i.Id == id) ?? throw new Exception(exceptionNotFound);
         }
         public Cliente Create(Cliente novoCliente) 
         {

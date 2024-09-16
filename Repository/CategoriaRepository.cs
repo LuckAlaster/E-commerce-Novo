@@ -1,9 +1,6 @@
 ﻿namespace E_commerce.Models
 {
     using E_commerce.Repository;
-    using MathNet.Numerics.Distributions;
-    using NPOI.SS.Formula.Functions;
-    using Org.BouncyCastle.Utilities;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -19,13 +16,13 @@
             }
             return ListaDeObjetos;
         }
-        public Categoria FindById(uint? id)
+        public Categoria FindById(uint? id,string exceptionNotFound = "Essa id não existe dentro da lista de Categoria")
         {
-            return ListaDeObjetos.First(x => x.Id == id) ??  throw new Exception("Essa id não existe dentro da ListaDeObjetos");   
+            return ListaDeObjetos.First(x => x.Id == id) ??  throw new Exception(exceptionNotFound);   
         }
-        public Categoria FindByIdWithoutThrow(uint? id, string exception = "Essa id não existe nessa lista")
+        public Categoria FindByIdWithoutThrow(uint? id, string exceptionNotFound = "Essa id não existe nessa lista")
         {
-            return ListaDeObjetos.FirstOrDefault(x => x.Id == id) ?? throw new Exception(exception);
+            return ListaDeObjetos.FirstOrDefault(x => x.Id == id) ?? throw new Exception(exceptionNotFound);
         }
         public Categoria Create(Categoria novaCategoria)
         {

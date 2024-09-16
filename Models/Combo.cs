@@ -7,11 +7,11 @@ namespace E_commerce.Models
         public string Descricao { get; set; }
         public float? Valor { get; set; }
         public List<Produto> ListaProdutos { get; set; }
-        public Combo(string descricao, float valor, List<Produto> listaProdutos)
+        public Combo(string Descricao, float Valor, List<Produto> ListaProdutos)
         {
-            Descricao = descricao;
-            Valor = valor;
-            ListaProdutos = listaProdutos;
+            this.Descricao = Descricao;
+            this.Valor = Valor;
+            this.ListaProdutos = ListaProdutos;
         }
     }
 }

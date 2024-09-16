@@ -15,17 +15,17 @@
         public List<Comentario> ListaComentarios { get; }
         public List<Cor> ListaCores { get; }
         public List<Tamanho> ListaTamanhos { get; }
-        public Pedido(DateTime? data, bool? pago, float desconto, StatusPedido? status, Cliente cliente, List<Produto> listaProdutos, List<Comentario> listaComentarios, List<Cor> listaCores, List<Tamanho> listaTamanhos)
+        public Pedido(DateTime? Data, bool? Pago, float Desconto, StatusPedido? Status, Cliente Cliente, List<Produto> ListaProdutos, List<Comentario> ListaComentarios, List<Cor> ListaCores, List<Tamanho> ListaTamanhos)
         {
-            Data = data;
-            Pago = pago;
-            Desconto = desconto;
-            Status = status;
-            Cliente = cliente;
-            ListaProdutos = listaProdutos;
-            ListaComentarios = listaComentarios;
-            ListaCores = listaCores;
-            ListaTamanhos = listaTamanhos;
+            this.Data = Data;
+            this.Pago = Pago;
+            this.Desconto = Desconto;
+            this.Status = Status;
+            this.Cliente = Cliente;
+            this.ListaProdutos = ListaProdutos;
+            this.ListaComentarios = ListaComentarios;
+            this.ListaCores = ListaCores;
+            this.ListaTamanhos = ListaTamanhos;
         }
     }
 }

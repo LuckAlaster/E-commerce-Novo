@@ -9,12 +9,12 @@ namespace E_commerce.Models
         public string Endereco { get; set; }
         public MetodoPagamento? MetodoDePagamento { get; set; }
         public List<Pedido> Pedidos { get; set; }
-        public Cliente(string nome, string endereco, MetodoPagamento? metodoDePagamento, List<Pedido> pedidos)
+        public Cliente(string Nome, string Endereco, MetodoPagamento? MetodoDePagamento, List<Pedido> Pedidos)
         {
-            Nome = nome;
-            Endereco = endereco;
-            MetodoDePagamento = metodoDePagamento;
-            Pedidos = pedidos;
+            this.Nome = Nome;
+            this.Endereco = Endereco;
+            this.MetodoDePagamento = MetodoDePagamento;
+            this.Pedidos = Pedidos;
         }
     }
 }

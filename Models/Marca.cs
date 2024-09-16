@@ -7,11 +7,11 @@ namespace E_commerce.Models
         public string Nome { get; }
         public string Descricao { get; }
         public List<Produto> ListaProdutos { get; }
-        public Marca(string nome, string descricao, List<Produto> listaProdutos)
+        public Marca(string Nome, string Descricao, List<Produto> ListaProdutos)
         {
-            Nome = nome;
-            Descricao = descricao;
-            ListaProdutos = listaProdutos;
+            this.Nome = Nome;
+            this.Descricao = Descricao;
+            this.ListaProdutos = ListaProdutos;
         }
 
     }

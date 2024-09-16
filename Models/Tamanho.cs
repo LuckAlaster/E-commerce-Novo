@@ -4,10 +4,10 @@
     {
         public string Nome { get; }
         public string Descricao { get; }
-        public Tamanho(string nome, string descricao)
+        public Tamanho(string Nome, string Descricao)
         {
-            Nome = nome;
-            Descricao = descricao;
+            this.Nome = Nome;
+            this.Descricao = Descricao;
         }
     }
 }

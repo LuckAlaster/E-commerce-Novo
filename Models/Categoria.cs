@@ -4,10 +4,10 @@
     {
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public Categoria(string nome, string descricao)
+        public Categoria(string Nome, string Descricao)
         {
-            Nome = nome;
-            Descricao = descricao;
+            this.Nome = Nome;
+            this.Descricao = Descricao;
         }
     }
 }

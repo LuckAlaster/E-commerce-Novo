@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace E_commerce.Repository
 {
-    internal class ComboRepository
+    internal class ComboRepository : IRepository<Combo>
     {
         private List<Combo> ListaDeCombos = new List<Combo>();
         public List<Combo> FindAll()
         {
             return ListaDeCombos;
         }
-        public Combo FindById(uint? id)
+        public Combo FindById(uint? id, string exceptionNotFound = "Essa id não existe nessa Lista de Combo")
         {
-            return ListaDeCombos.First(l => l.Id == id) ?? throw new Exception("Esse id não existe nessa lista");
+            return ListaDeCombos.First(l => l.Id == id) ?? throw new Exception(exceptionNotFound);
         }
-        public Combo FindByIdWithoutThrow(uint? id, string exception = "Esse id não existe nessa lista")
+        public Combo FindByIdWithoutThrow(uint? id, string exceptionNotFound = "Esse id não existe nessa lista")
         {
-            return ListaDeCombos.FirstOrDefault(l => l.Id == id) ?? throw new Exception(exception);
+            return ListaDeCombos.FirstOrDefault(l => l.Id == id) ?? throw new Exception(exceptionNotFound);
         }
         public Combo Create (Combo novoCombo) 
         {

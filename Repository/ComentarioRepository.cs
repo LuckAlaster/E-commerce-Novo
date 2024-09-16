@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace E_commerce.Repository
 {
-    internal class ComentarioRepository
+    internal class ComentarioRepository : IRepository<Comentario>
     {
         private List<Comentario> ListaDeComentarios = new List<Comentario>();
         public List<Comentario> FindAll()
         {
             return ListaDeComentarios;
         }
-        public Comentario FindById(uint? id)
+        public Comentario FindById(uint? id, string exceptionNotFound = "Essa id não existe nessa Lista de Comentario")
         {
-            return ListaDeComentarios.First(l => l.Id == id) ?? throw new Exception("Este id não existe na lista");
+            return ListaDeComentarios.First(l => l.Id == id) ?? throw new Exception(exceptionNotFound);
         }
-        public Comentario FindByIdWithoutThrow(uint? id, string exception = "Esse id não existe nessa lista")
+        public Comentario FindByIdWithoutThrow(uint? id, string exceptionNotFound = "Esse id não existe nessa lista")
         {
-            return ListaDeComentarios.FirstOrDefault(l => l.Id == id) ?? throw new Exception(exception);
+            return ListaDeComentarios.FirstOrDefault(l => l.Id == id) ?? throw new Exception(exceptionNotFound);
         }
         public Comentario Create(Comentario novoComentario)
         {
@@ -48,7 +48,7 @@ namespace E_commerce.Repository
             comentarioParaAtualizar.Produto = comentarioUpdate.Produto;
             return comentarioParaAtualizar;
         }
-        public void Delete (uint id)
+        public void Delete (uint? id)
         {
             Comentario comentarioParaDeletar = FindByIdWithoutThrow(id) ?? throw new Exception("Esse comentário não existe na lista");
             ListaDeComentarios.Remove(comentarioParaDeletar);
